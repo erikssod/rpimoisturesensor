@@ -26,9 +26,11 @@ class ping:
 
     def ping_channel(self):
         io = GPIO.input(self.channel)
-        what = {1:'DRY!',
-                0:'WET!'}
-        where = {17:'office garden bed'}
+        what = {1:'DRY!!!',
+                0:'WET'}
+        where = {17:'office garden bed #1',
+                 23:'office garden bed #2',
+                 24:'office garden bed #3',}
         self.logger.info(f'{where[self.channel]} reads {what[io]}')
 
     def keep_pinging(self):
@@ -38,8 +40,18 @@ class ping:
 
 if __name__ == '__main__':
     a = ping(17)
-    a.test()
     a.setupGPIO()
-    a.keep_pinging()
-    #a.ping_channel()
+
+    b = ping(23)
+    b.setupGPIO()
+
+    c = ping(24)
+    c.setupGPIO()
+   
+    while True:
+        a.ping_channel()
+        b.ping_channel()
+        c.ping_channel()
+        print('-----------------------')
+        time.sleep(2)
 
