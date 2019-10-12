@@ -21,8 +21,18 @@ class ping:
     def test(self):
         self.logger.info(f'Watching {self.channel}')
 
-    def setupGPIO(self):
+    def setupIN(self):
         GPIO.setup(self.channel, GPIO.IN)
+
+    def setupOUT(self):
+        GPIO.setup(self.channel, GPIO.OUT)
+
+    def up(self):
+        GPIO.output(self.channel, GPIO.HIGH)
+        time.sleep(0.5)
+
+    def down(self):
+        GPIO.output(self.channel, GPIO.LOW)
 
     def ping_channel(self):
         io = GPIO.input(self.channel)
@@ -40,18 +50,23 @@ class ping:
 
 if __name__ == '__main__':
     a = ping(17)
-    a.setupGPIO()
+    a.setupIN()
 
     b = ping(23)
-    b.setupGPIO()
+    b.setupIN()
 
     c = ping(24)
-    c.setupGPIO()
+    c.setupIN()
+
+    d = ping(7)
+    d.setupOUT()
    
     while True:
+        d.up()
         a.ping_channel()
         b.ping_channel()
         c.ping_channel()
+        d.down()
         print('-----------------------')
-        time.sleep(2)
+        time.sleep(60)
 
