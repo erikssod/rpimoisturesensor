@@ -28,7 +28,7 @@ YAML config files seems like a thing to have to abstract out which physical pins
 Process control via e.g. systemcl or supervisor. Because that's what I know, not because it's best. See above docker comment if applicable. 
 
 ## Database (proposed)
-*Points vaguely at the sky*. Gotta use that wifi connectivity, and my Google Drive account.
+*\*Points vaguely at the sky\**. Gotta use that wifi connectivity, and my Google Drive account.
 
 ## Frontend (proposed)
 Mostly data plotting for now. Local webpage with live readout sounds about right. Future projects (e.g. RPi powered solenoids for a watering system!) will require inputs as well as readouts. 
