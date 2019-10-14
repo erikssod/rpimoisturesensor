@@ -21,7 +21,11 @@ Currently Raspbian light, but open for suggestions. I've looked into Alpine and 
 Ordered 5 x 2Gb micro SD cards on the cheap with the intention that the OS should be kept lean. Could be upped if this is an issue. 
 
 ## Backend (proposed)
-...Python? Python.
+...Python? Python. The RPi.GPIO library seems to have good support for writing testbeds that can be used as simulated inputs for the readout code. Means all development can happen outside the RPi's themselves. 
+
+YAML config files seems like a thing to have to abstract out which physical pins get used in the code proper. Ideally, one config file for the whole project and not one per RPi. Individual RPi's can be identified based on e.g. mac address or so. 
+
+Process control via e.g. systemcl or supervisor. Because that's what I know, not because it's best. See above docker comment if applicable. 
 
 ## Database (proposed)
 *Points vaguely at the sky*. Gotta use that wifi connectivity, and my Google Drive account.
