@@ -8,9 +8,9 @@ Reads out from three moisture sensors. These are powered from a GPIO pin, and on
 
 [pics of plant stabbed with sensors], [pic of rpi zero in all its tinyness]
 
-Current sensors in use are the resistive variant [link to vendor], which are dirt cheap ($1.50), but supposedly don't last very long. Doesn't matter much as long as they can be easily swapped out. In the current confuguration, they only read out above or below threshold (i.e. DRY or WET). This threshold can be tuned via individual pots.
+Current sensors in use are the [resistive variant](https://www.auselectronicsdirect.com.au/soil-moisture-sensor-module-for-arduino-projects), which are dirt cheap ($1.50), but supposedly don't last very long. Doesn't matter much as long as they can be easily swapped out. In the current confuguration, they only read out above or below threshold (i.e. DRY or WET). This threshold can be tuned via individual pots.
 
-Next generation sensors are capacitive [link to vendor]. These are more expensive ($15.00), but supposed to be far more durable. Also, supposed to be easier to configure for analogue readout (i.e wetness level on a scale).
+Next generation sensors are [capacitive](https://thepihut.com/products/gravity-analog-capacitive-soil-moisture-sensor-corrosion-resistant). These are more expensive ($15.00), but supposed to be far more durable. Also, supposed to be easier to configure for analogue readout (i.e wetness level on a scale).
 
 ## Single-board computer
 RPi zero WH (Wireless with soldered Headers on the 40x GPIO). Current plan is to run one per garden bed (i.e. four). I have five already. They appear to consume very little power, and can proably be fed from a battery pack that recharges over day from a cheap solar cell. I ran an RPi powering a string of fairy lights, and reponding to pings, for twelve hours on a 8Wh (3.7V, 2200mAh) battery.
