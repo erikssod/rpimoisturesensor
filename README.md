@@ -6,7 +6,14 @@ An underhanded attempt to involve other, gifted, people in my automated garden e
 ## ProofOfPrinciple.py
 Reads out from three moisture sensors. These are powered from a GPIO pin, and only briefly energised when reading out.
 
-[pics of plant stabbed with sensors], [pic of rpi zero in all its tinyness]
+|RPi Zero|Sensor|Other bit|
+|:-------------:|:-------------:|:-------------:|
+|![alt text][tiny]|![alt text][stab]|![alt text][pot]|
+|Full size USB for scale|So cheap|Thresholding pot|
+
+[tiny]: https://github.com/erikssod/rpimoisturesensor/blob/master/images/IMG_20191013_122024.jpg "Tiny!"
+[stab]: https://github.com/erikssod/rpimoisturesensor/blob/master/images/IMG_20191006_173445.jpg "Stab!"
+[pot]: https://github.com/erikssod/rpimoisturesensor/blob/master/images/IMG_20191006_173437.jpg "Pot!"
 
 Current sensors in use are the [resistive variant](https://www.auselectronicsdirect.com.au/soil-moisture-sensor-module-for-arduino-projects), which are dirt cheap ($1.50), but supposedly don't last very long. Doesn't matter much as long as they can be easily swapped out. In the current confuguration, they only read out above or below threshold (i.e. DRY or WET). This threshold can be tuned via individual pots.
 
